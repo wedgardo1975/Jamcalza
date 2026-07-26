@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda JamCalza</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        .filtros { margin-bottom: 20px; padding: 15px; background: white; border-radius: 8px; }
+        select { margin-right: 15px; padding: 8px; }
+        #catalogo { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .tarjeta-producto { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .tarjeta-producto img { max-width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+        .precio { font-weight: bold; color: #2ecc71; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+
+    <h1>Catálogo JamCalza</h1>
+
+    <div class="filtros">
+        <label>Categoría: </label>
+        <select id="filtro-categoria" onchange="aplicarFiltros()">
+            <option value="">Todas</option>
+        </select>
+
+        <label>Talla: </label>
+        <select id="filtro-talla" onchange="aplicarFiltros()">
+            <option value="">Todas</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+        </select>
+
+        <label>Ubicación: </label>
+        <select id="filtro-ubicacion" onchange="aplicarFiltros()">
+            <option value="">Todas</option>
+        </select>
+    </div>
+
+    <div id="catalogo"></div>
+
+    <!-- Enlace obligatorio a tu archivo de lógica -->
+    <script src="catalogo.js"></script>
+
+</body>
+</html>
